@@ -17,7 +17,7 @@ class CreateStoresTable extends Migration
             $table->id();
             $table->text('name');
             $table->longtext('description');
-            $table->foreignId('address_id')->references('id')->on('addresses');
+            $table->foreignId('address_id')->constrained();
             $table->text('url');
             $table->text('image');
         });

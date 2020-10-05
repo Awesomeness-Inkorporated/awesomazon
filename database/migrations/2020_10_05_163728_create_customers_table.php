@@ -18,8 +18,8 @@ class CreateCustomersTable extends Migration
             $table->text('first_name');
             $table->text('middle_name')->nullable();
             $table->text('last_name');
-            $table->foreignId('user_id')->references('id')->on('users');
-            $table->foreignId('address_id')->references('id')->on('addresses');
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('address_id')->constrained();
         });
     }
 
