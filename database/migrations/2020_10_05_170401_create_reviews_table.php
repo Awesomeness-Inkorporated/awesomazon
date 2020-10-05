@@ -18,6 +18,7 @@ class CreateReviewsTable extends Migration
             $table->foreignId('customer_id')->constrained();
             $table->decimal('rating');
             $table->mediumText('comment');
+            $table->timestampsTz();
         });
     }
 

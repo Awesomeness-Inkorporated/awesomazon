@@ -20,6 +20,7 @@ class CreateCustomersTable extends Migration
             $table->text('last_name');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('address_id')->constrained();
+            $table->timestampsTz();
         });
     }
 

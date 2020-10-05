@@ -19,6 +19,7 @@ class CreateOrderProductTable extends Migration
             $table->foreignId('store_product_id')->constrained('product_store');
             $table->integer('quantity');
             $table->decimal('amount');
+            $table->timestampsTz();
         });
     }
 

@@ -20,6 +20,7 @@ class CreateStoresTable extends Migration
             $table->foreignId('address_id')->constrained();
             $table->text('url');
             $table->text('image');
+            $table->timestampsTz();
         });
     }
 

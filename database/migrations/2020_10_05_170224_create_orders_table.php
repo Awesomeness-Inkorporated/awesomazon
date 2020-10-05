@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->decimal('amount');
             $table->integer('payment_method');
             $table->timestampTz('paid_at');
+            $table->timestampsTz();
         });
     }
 

@@ -27,6 +27,7 @@ class CreateAddressesTable extends Migration
             $table->text('zip');
             $table->text('phone');
             $table->text('email');
+            $table->timestampsTz();
         });
     }
 

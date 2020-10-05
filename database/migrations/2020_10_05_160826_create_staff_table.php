@@ -21,6 +21,7 @@ class CreateStaffTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('address_id')->constrained();
             $table->foreignId('emergency_contact_id')->constrained('addresses');
+            $table->timestampsTz();
         });
     }
 

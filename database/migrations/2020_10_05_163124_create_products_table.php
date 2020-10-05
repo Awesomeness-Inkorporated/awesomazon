@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->longtext('description');
             $table->text('warranty_text');
             $table->json('meta');
+            $table->timestampsTz();
         });
     }
 
