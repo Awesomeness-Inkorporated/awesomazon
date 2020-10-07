@@ -16,10 +16,10 @@ class CreateStoresTable extends Migration
         Schema::create('stores', function (Blueprint $table) {
             $table->id();
             $table->text('name');
-            $table->longtext('description');
-            $table->foreignId('address_id')->constrained();
-            $table->text('url');
-            $table->text('image');
+            $table->longtext('description')->nullable();
+            $table->foreignId('address_id')->nullable();
+            $table->text('url')->nullable();
+            $table->text('image')->nullable();
             $table->timestampsTz();
         });
     }

@@ -16,10 +16,10 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->text('name');
-            $table->text('image');
+            $table->text('image')->nullable();
             $table->longtext('description');
-            $table->text('warranty_text');
-            $table->json('meta');
+            $table->text('warranty_text')->nullable();
+            $table->json('meta')->nullable();
             $table->timestampsTz();
         });
     }

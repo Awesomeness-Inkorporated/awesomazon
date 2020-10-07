@@ -16,17 +16,17 @@ class CreateAddressesTable extends Migration
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->text('contact_name');
-            $table->text('lat');
-            $table->text('lng');
-            $table->text('estate_name');
-            $table->text('street');
-            $table->text('city');
-            $table->text('district');
-            $table->text('state');
-            $table->text('country');
-            $table->text('zip');
-            $table->text('phone');
-            $table->text('email');
+            $table->text('lat')->nullable();
+            $table->text('lng')->nullable();
+            $table->text('estate_name')->nullable();
+            $table->text('street')->nullable();
+            $table->text('city')->nullable();
+            $table->text('district')->nullable();
+            $table->text('state')->nullable();
+            $table->text('country')->nullable();
+            $table->text('zip')->nullable();
+            $table->text('phone')->nullable();
+            $table->text('email')->nullable();
             $table->timestampsTz();
         });
     }
