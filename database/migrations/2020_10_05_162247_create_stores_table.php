@@ -17,7 +17,7 @@ class CreateStoresTable extends Migration
             $table->id();
             $table->text('name');
             $table->longtext('description')->nullable();
-            $table->foreignId('address_id')->nullable();
+            $table->foreignId('address_id')->nullable()->constrained();
             $table->text('url')->nullable();
             $table->text('image')->nullable();
             $table->timestampsTz();
