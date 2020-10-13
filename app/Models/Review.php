@@ -11,4 +11,7 @@ class Review extends Model
     public function customers() {
         return $this->belongsTo(Customer::class);
     }
+    public function products() {
+        return $this->belongsTo(Product::class);
+    }
 }
